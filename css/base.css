@@ -1,0 +1,57 @@
+*{
+	font-family: 'Inconsolata', monospace;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+}
+a{
+	color: white;
+	text-decoration: none;
+}
+
+.Borda{
+	border: thin solid #000;
+}
+
+#cabecalho{
+	background-color: #8FCACA;
+    	padding: 10px 0;
+    	text-align: center;
+    	color: white;
+}
+
+#limitador-cabecalho{
+	width: 1000px;
+	margin: 0 auto;
+}
+
+#logo{
+	height: 40px;
+    	text-align: center;
+    	width: 130px;
+	float: left;
+}
+
+#menu{
+	float: right;
+	margin-top: 10px;
+}
+
+#itens-menu{
+}
+
+.item-menu{
+	display: inline;
+	margin-right: 50px;
+	cursor: pointer;
+}
+
+#limpador{
+	clear: both;
+}
+@media screen and (max-width: 1000px){
+	#limitador-cabecalho{
+        width: 100%;
+        margin-right: 0;
+        }
+}
