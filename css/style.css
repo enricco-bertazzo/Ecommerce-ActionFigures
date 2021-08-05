@@ -50,9 +50,29 @@
 
 h2{
 	background-color: #8FCACA;
-        padding: 10px 0;
+        padding: 6px 0px;
+        margin-top: 12px;
         text-align: center;
         color: white;
+}
+
+#menu{
+        background-color: #8FCACA;
+        text-align: center;
+        padding: 6px;
+        margin-top: 12px;
+        color: white;
+}
+
+.item-menu{
+	display: inline;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+#limitador-cabecalho{
+	width: 400px;
+	margin: 0 auto;
 }
 
 .info-single-checkout{

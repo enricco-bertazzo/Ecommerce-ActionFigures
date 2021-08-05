@@ -18,8 +18,8 @@ a{
 }
 
 #cabecalho, #rodape{
-	background-color: #3880F7;
-    	padding: 10px 0;
+	background-color: #8FCACA;
+    	padding: 20px 0;
     	text-align: center;
     	color: white;
 	text-shadow: 1px 1px 2px black;
@@ -39,10 +39,11 @@ a{
 
 #menu{
 	float: right;
-	margin-top: 10px;
+	margin-top: 0px;
 }
 
 .item-menu{
+	margin-top: 2px;
 	display: inline;
 	margin-right: 50px;
 	cursor: pointer;
