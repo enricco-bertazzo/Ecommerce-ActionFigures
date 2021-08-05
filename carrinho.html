@@ -1,12 +1,49 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title> Meu Carrinho </title>
-        
-    </head>
 
-    <body>
+<head>
+    <meta charset="utf-8">
+    <title> Meu Carrinho </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
 
-    </body>
+<body>
+    <h2> Items no Carrinho </h2>
+    <div id="carrinho">
+    </div>
+
+    <script src="js/lista-produtos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+<script>
+    atualizarCarrinho = () => {
+        var containerCarrinho = document.getElementById('carrinho');
+        containerCarrinho.innerHTML = "";
+        items.map((val) => {
+            if (val.quantidade > 0) {
+                containerCarrinho.innerHTML += `
+                	<div class="info-single-checkout">   
+                	<p style="float:left">Produto: ` + val.nome + `</p>
+                	<p style="float:right">Quantidade: ` + val.quantidade + `</p>
+                    	<div style="clear:both"></div>
+                    	</div>
+                 `;
+            }
+        })
+    }
+
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+        links[i].addEventListener("click", function() {
+            let key = this.getAttribute('key');
+            items[key].quantidade++;
+            atualizarCarrinho();
+            return false;
+        })
+    }
+</script>
+
 </html>
