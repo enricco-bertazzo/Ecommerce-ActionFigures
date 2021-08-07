@@ -87,6 +87,15 @@ h2 {
     padding: 10px 0;
 }
 
+body{
+    background-image: url("../images/fundo-pagina/fundo.jpg");
+    background-repeat: no-repeat;
+}
+
+.remove{
+    text-align: center;
+}
+
 @media screen and (max-width: 768px) {
     .produto-single {
         width: 100%;

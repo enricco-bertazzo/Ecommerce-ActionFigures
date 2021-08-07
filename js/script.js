@@ -1,13 +1,10 @@
-var total = 0;
-
-
 inicializarLoja = () => {
     var containerProdutos = document.getElementById('produtos');
     items.map((val) => {
         containerProdutos.innerHTML += `      
         	<div class="produto-single"> 
                 <img src="` + val.img + `" />
-                <p> ` + val.nome + ` </p>
+                <p> ` + val.nome + `<br>R$:`+ val.valor +` </p>
                 <a key="` + val.id + `" href="#"> Adicionar ao carrinho </a>                   
                 </div>
                     `;
@@ -16,6 +13,7 @@ inicializarLoja = () => {
 
 inicializarLoja();
 
+var total = 0;
 atualizarCarrinho = () => {
     var containerCarrinho = document.getElementById('carrinho');
     containerCarrinho.innerHTML = "";
@@ -25,7 +23,7 @@ atualizarCarrinho = () => {
             total = parseFloat(total.toFixed(2));
             containerCarrinho.innerHTML += `
                 	<div class="info-single-checkout">   
-                	<p style="float:left">Produto: ` + val.nome + `<br> Remover Produto </p>
+                	<p style="float:left">Produto:` + val.nome + `</p>
                 	<p style="float:right">Valor un. R$ ` + val.valor +  `<br>Quantidade: ` + val.quantidade + `</p>    
                     	<div style="clear:both"></div>
                     	</div>
@@ -38,7 +36,6 @@ atualizarCarrinho = () => {
         <center> <p>Total da Compra: R$ ` + total + `</p> </center>
             <div style="clear:both"></div>
             </div>`
-        
 }
 
 var links = document.getElementsByTagName('a');
